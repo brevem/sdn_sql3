@@ -207,5 +207,5 @@ SELECT
 	, h.HospitalSize
 FROM
 	PatientStay ps
-JOIN DimHospital h ON
+left JOIN DimHospitalBad h ON
 	ps.Hospital = h.Hospital;
