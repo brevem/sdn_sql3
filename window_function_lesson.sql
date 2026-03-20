@@ -252,7 +252,8 @@ WITH
 			PatientId
 	, Hospital
 	, Tariff
-	, ROW_NUMBER() OVER (PARTITION BY Hospital ORDER BY Tariff DESC,PatientId) AS PatientRank
+	, ROW_NUMBER() OVER (PARTITION BY Hospital ORDER BY Tariff DESC,PatientId)
+		--AS PatientRank
 		FROM
 			PatientStay
 	)
