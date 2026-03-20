@@ -1,0 +1,27 @@
+{
+  "name": "SQL Student Course",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-mssql.mssql"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "mssql.connections": [
+          {
+            "server": "zomalex-sql.database.windows.net",
+            "database": "LearnSQL",
+            "authenticationType": "SqlLogin",
+            "user": "student10",
+            "savePassword": true,
+            "encrypt": "Mandatory",
+            "trustServerCertificate": false,
+            "port": 1433
+          }
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Codespace ready for SQL course'"
+}
